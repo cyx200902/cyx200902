@@ -1,0 +1,1557 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=0 , minimum-scale=1.0 , maximum-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="baidu-site-verification" content="gRlnVfCShx" />
+<meta name="baidu-site-verification" content="SBjN0OTwhw" />
+<title>编程学习网 - PHP/laravel/swoole新手中文教程</title>
+<meta name="keywords" content="编程学习,PHP学习,PHP教程,laravel,swoole,go,WEB开发,代码片段,HTML,CSS,PHP,JavaScript,AJAX,ASP.NET,SQL,Python" />
+<meta name="description" content="编程学习网提供了最全php基础编程技术与教程。 介绍了HTML、CSS、Javascript、Python，Java，Ruby，C，PHP , laravel,swoole,go等各种编程语言的基础知识提供：WEB开发、PHP技术、代码片段等。" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen" /><link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/mobile.css" />
+<style type="text/css">
+	@media screen and (min-width:1366px){.c-con{height:140px;}}
+</style>
+<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	(function(){mod_txt = '#text-5'; adminBar = "" || 0})();
+</script>
+<script type="text/javascript" src="/js/base.js"></script>
+<!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
+<link rel="stylesheet" href="/css/font-awesome.min.css" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="/css/font-awesome-ie7.min.css" />
+<![endif]-->
+</head>
+<body class="home blog custom-background">
+<div class="loading"></div>
+<div class="web_bod">
+	<header class="header marauto nav">
+		<span class="logo">
+			<a href="/" title="编程学习网" rel="home">
+				<img src="/images/phpxs.png" alt="编程学习网" />
+			</a>
+											<a href="http://www.phpxs.com/code/php/" target="_blank">PHP 代码分享</a>
+								<a href="http://www.phpxs.com/j/mongodb/" target="_blank">MongoDB 教程</a>
+								<a href="http://www.phpxs.com/j/regexp/" target="_blank">正则表达式</a>
+								<a href="http://www.phpxs.com/j/jquery/" target="_blank">jQuery 教程</a>
+								<a href="http://www.phpxs.com/code/javascript/" target="_blank">JavaScript 代码片段</a>
+								<a href="http://www.phpxs.com/j/php7/" target="_blank">PHP7 教程</a>
+									</span>
+		<form role="search" method="get" id="searchform" action="/search/">
+			<span class="search">
+				<input name="keyword" id="s" class="input" value="" placeholder="请输入关键词开始搜索吧" type="text" />
+				<button id="searchsubmit" class="btn">搜索</button>
+			</span>
+		</form>
+		<div class="cls"></div>
+	</header>
+	<div class="nav marauto navifrname">
+		<div class="tig">
+			<a href="http://www.23673.com" title="编程书籍"><span class="sub">编程书籍</span></a>
+			<a href="http://www.phpxs.com/post/5957/" target="_blank"><span class="rrs">高级教程</span></a>   
+			<div class="gonggao">
+				<ul id="g_box">
+					<li><span class="gg_tx"><i class="icon-volume-off icon-large"></i>代码片段： <a target="_blank" href="/code/">入口</a></span></li>
+					<li><span class="gg_tx"><i class="icon-volume-off icon-large"></i>Yii2.0教程： <a target="_blank" href="http://www.phpxs.com/post/yii2">入口</a></span></li>
+					<li><span class="gg_tx"><i class="icon-volume-off icon-large"></i>广告合作 联系QQ：<a class="tag-link-31" target="_blank" href="tencent://message/?uin=857530&Site=PHP新手&Menu=yes">857530</a></span></li>
+					<li></li>          
+				</ul>
+			</div>
+		</div>
+		<div class="navlist">
+			<dl>
+				<dt><a href="/fenxiang/" title="好东西分享" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/fengxiang.gif" width="45" height="45" /></a></dt>
+				<dd>好站分享</dd>
+			</dl>
+						<dl>
+				<dt><a href="/j/mysql/" title="MySql 教程" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/icon/mysql.png" width="45" height="45" /></a></dt>
+				<dd>MySql 教程</dd>
+			</dl>
+						<dl>
+				<dt><a href="/j/php/" title="PHP 教程" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/icon/php.png" width="45" height="45" /></a></dt>
+				<dd>PHP 教程</dd>
+			</dl>
+						<dl>
+				<dt><a href="/j/html/" title="HTML 教程" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/icon/html.png" width="45" height="45" /></a></dt>
+				<dd>HTML 教程</dd>
+			</dl>
+						<dl>
+				<dt><a href="/j/css/" title="CSS 教程" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/icon/css.png" width="45" height="45" /></a></dt>
+				<dd>CSS 教程</dd>
+			</dl>
+						<dl>
+				<dt><a href="/j/html5/" title="HTML5教程" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/icon/html5.png" width="45" height="45" /></a></dt>
+				<dd>HTML5教程</dd>
+			</dl>
+						<dl>
+				<dt><a href="/j/linux/" title="Linux 教程" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/icon/linux.png" width="45" height="45" /></a></dt>
+				<dd>Linux 教程</dd>
+			</dl>
+						<dl>
+				<dt><a href="/j/json/" title="JSON 教程" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/icon/json.png" width="45" height="45" /></a></dt>
+				<dd>JSON 教程</dd>
+			</dl>
+						<dl>
+				<dt><a href="/j/http/" title="HTTP 教程" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/icon/http.png" width="45" height="45" /></a></dt>
+				<dd>HTTP 教程</dd>
+			</dl>
+						<dl>
+				<dt><a href="/j/design/" title="设计模式" target="_blank" class="nav_button" style="opacity: 0.7;"><img src="/images/icon/design.png" width="45" height="45" /></a></dt>
+				<dd>设计模式</dd>
+			</dl>
+						<div class="cls"></div>
+
+		</div>
+	</div>
+	<nav class="navcon marauto">
+		<div id="mobile_nav_btn">编程学习网</div>
+		<div class="menu-header">
+			<ul id="menu-wplook-main-menu" class="menu">
+				<li class="menu-item menu-item-type-post_type menu-item-object-page">
+					<a href="/">首页</a>
+					<ul class="sub-menu">
+						<li id="menu-item-8220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8220"><a title="PHP教程" href="/php/">PHP教程</a></li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" title="代码片段" href="/code/">代码片段</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a target="_blank" title="编程教程" href="/j/">教程</a></li>
+															<li id="menu-item-990" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children">
+							<a href="/post/php/">PHP技术</a>
+							<ul class="sub-menu">
+																	<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a title="php基础" href="/post/phpBase/">php基础</a></li>
+																	<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a title="php中级" href="/post/phpZhongji/">php中级</a></li>
+																	<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a title="php高级" href="/post/phpGaoji/">php高级</a></li>
+																	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a title="laravel" href="/post/laravel/">laravel</a></li>
+																	<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a title="swoole" href="/post/swoole/">swoole</a></li>
+																	<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a title="ThinkPHP框架" href="/post/thinkPHP/">ThinkPHP框架</a></li>
+																	<li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a title="Yii2" href="/post/yii2/">Yii2</a></li>
+																	<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a title="PHP安全" href="/post/safety/">PHP安全</a></li>
+																	<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a title="ZendFramework框架" href="/post/zendFramework/">ZendFramework框架</a></li>
+																	<li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a title="Yii1" href="/post/yii/">Yii1</a></li>
+															</ul>
+						</li>								
+																																																																																																														<li id="menu-item-9911" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children">
+							<a href="/post/web/">WEB开发</a>
+							<ul class="sub-menu">
+																	<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a title="代码" href="/post/code/">代码</a></li>
+																	<li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a title="网站运营" href="/post/seo/">网站运营</a></li>
+																	<li id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"><a title="JavaScript开发" href="/post/javascript/">JavaScript开发</a></li>
+																	<li id="menu-item-133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a title="浏览器兼容" href="/post/ie/">浏览器兼容</a></li>
+																	<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a title="HTML5" href="/post/html5/">HTML5</a></li>
+																	<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a title="CSS+DIV" href="/post/css/">CSS+DIV</a></li>
+															</ul>
+						</li>								
+																																																																										<li id="menu-item-9918" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children">
+							<a href="/post/db/">数据库</a>
+							<ul class="sub-menu">
+																	<li id="menu-item-100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-100"><a title="MongoDB" href="/post/mongodb/">MongoDB</a></li>
+																	<li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a title="SQL Server" href="/post/sqlserver/">SQL Server</a></li>
+																	<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a title="Oracle" href="/post/oracle/">Oracle</a></li>
+																	<li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a title="MySql" href="/post/mysql/">MySql</a></li>
+															</ul>
+						</li>								
+																																																								<li id="menu-item-9923" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children">
+							<a href="/post/server/">服务器</a>
+							<ul class="sub-menu">
+																	<li id="menu-item-180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180"><a title="CentOS" href="/post/centOS/">CentOS</a></li>
+																	<li id="menu-item-181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181"><a title="Ubuntu" href="/post/ubuntu/">Ubuntu</a></li>
+																	<li id="menu-item-182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182"><a title="Nginx" href="/post/nginx/">Nginx</a></li>
+																	<li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183"><a title="Apache" href="/post/apache/">Apache</a></li>
+																	<li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a title="Linux" href="/post/linux/">Linux</a></li>
+															</ul>
+						</li>								
+																																																																	<li id="menu-item-9929" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children">
+							<a href="/post/bc/">编程语言</a>
+							<ul class="sub-menu">
+																	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a title="C/C++开发" href="/post/c/">C/C++开发</a></li>
+																	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a title="go" href="/post/go/">go</a></li>
+																	<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a title=".NET开发" href="/post/net/">.NET开发</a></li>
+																	<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a title="ASP开发" href="/post/asp/">ASP开发</a></li>
+																	<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114"><a title="Java Web开发" href="/post/java/">Java Web开发</a></li>
+																	<li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a title="Python" href="/post/Python/">Python</a></li>
+																	<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a title="iOS开发" href="/post/ios/">iOS开发</a></li>
+																	<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a title="Android开发" href="/post/android/">Android开发</a></li>
+															</ul>
+						</li>								
+																																																																																												<li id="menu-item-9938" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children">
+							<a href="/post/programmer/">程序人生</a>
+							<ul class="sub-menu">
+																	<li id="menu-item-170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a title="幽默程序员" href="/post/humor/">幽默程序员</a></li>
+																	<li id="menu-item-171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171"><a title="程序员面试技艺" href="/post/job/">程序员面试技艺</a></li>
+															</ul>
+						</li>								
+																																						<li id="menu-item-9941" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children">
+							<a href="/post/s/">小程序</a>
+							<ul class="sub-menu">
+															</ul>
+						</li>								
+																				<li id="menu-item-9942" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children">
+							<a href="/post/ucd/">产品设计</a>
+							<ul class="sub-menu">
+															</ul>
+						</li>								
+																				<li id="menu-item-9943" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children">
+							<a href="/post/internet/">IT圈内</a>
+							<ul class="sub-menu">
+																	<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a title="职场励志" href="/post/zhichang/">职场励志</a></li>
+																	<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-221"><a title="安全" href="/post/safe/">安全</a></li>
+																	<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a title="创业" href="/post/start/">创业</a></li>
+															</ul>
+						</li>								
+																																							</ul>
+		</div>  
+	</nav>   
+	<section class="conter marauto">
+		<script type="text/javascript">loading('33%',350)</script>
+
+	<div class="main">
+				<div class="focus">
+			<div class="focus_img">
+				<ul>
+																		<li>
+								<a target="_blank" href="http://www.phpxs.com/post/5957/">
+									<img src="/uploads/201910/11/e0422af1533486e2486b9d3dcbbd8533.jpg" alt="2019高级编程视频教程获取" />
+								</a>
+								<div class="type_text"><p class="title">2019高级编程视频教程获取</p></div>
+							</li>
+															</ul>
+			</div>
+			<div class="bt_line"></div>
+		</div>
+		<script type="text/javascript">
+			jQuery(window).resize(function(){
+				FocusSize()
+			})
+			//焦点图
+			jQuery(document).ready(function($){
+				dn = 0;
+				imgNum  = $('.focus_img img').length;
+				homeFocus(0)
+				FocusSize()
+				for(i=0;i<imgNum;i++){
+					$("<a href='javascript:;'></a>").appendTo(".bt_line");
+				}
+				$('.bt_line a').mouseover(function(){
+					var btIndex = $(this).index();
+					$('.bt_line a').eq(btIndex).addClass('current').siblings().removeClass();
+					homeFocus(btIndex)
+					dn = btIndex;
+				})
+				$('.bt_line a').eq(0).addClass('current');
+				$('.focus_img li').eq(0).show();
+
+				$('.focus').hover(function(){
+					clearTimeout(clocks);
+				},function(){
+					clocks = setInterval(clock,5000)
+				})
+				clocks = setInterval(clock,5000)
+				function clock(){
+					if(dn >= imgNum - 1){dn = 0}else{dn++};
+					homeFocus(dn)
+				}
+				function homeFocus(nub){
+					$('.focus_img li').eq(nub).css('z-index','3').siblings().css('z-index','0');
+					$('.focus_img li').eq(nub).fadeIn(500).siblings().fadeOut(500);
+					$('.bt_line a').eq(nub).addClass('current').siblings().removeClass();
+					imgSrc = $('.focus_img li img').eq(nub).attr('data-focus-src');
+					$('.focus_img li img').eq(nub).attr('src',imgSrc);
+				}
+			})
+			function FocusSize(){
+				defHeight = 380;
+				defWidth  = 960;
+				nowImgWidth = jQuery('.focus').width();
+				biLi = defHeight/defWidth;
+				FocusHeight = nowImgWidth * biLi;
+				jQuery('.focus_img').height(FocusHeight);
+				jQuery('.focus_img li').height(FocusHeight)
+				jQuery('.focus_img img').height(FocusHeight)
+			}
+		</script>
+										<div class="top_post">
+				<div class="titlecom">最 新</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7136/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>深入剖析ArrayList的底层源码-ArrayList 和 Vector 的区别						</a>
+						<span>2020-03-12</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">最 新</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7135/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>深入剖析ArrayList的底层源码-常用方法及其源码剖析						</a>
+						<span>2020-03-12</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">最 新</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7134/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>深入剖析ArrayList的底层源码-构造方法及其源码剖析						</a>
+						<span>2020-03-12</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">最 新</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7133/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>深入剖析ArrayList的底层源码-ArrayList介绍及其源码剖析						</a>
+						<span>2020-03-12</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">最 新</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7132/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>连存活到JDK8中著名的Bug都不知道,怎么敢给你加薪						</a>
+						<span>2020-03-12</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">最 新</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7131/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>python之路——初识面向对象 初识类和对象						</a>
+						<span>2020-03-12</span>
+					</h2>
+				</article>
+			</div>
+									<div class="top_box">
+						<div class="top_post">
+				<div class="title">热 门</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7162/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>PHP进程及进程间通信						</a>
+						<span>2020-03-19</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">热 门</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7161/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>基于pcntl的PHP进程池						</a>
+						<span>2020-03-19</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">热 门</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7160/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>php单例模式的常见应用场景						</a>
+						<span>2020-03-19</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">热 门</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7159/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>MySQL索引优化						</a>
+						<span>2020-03-19</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">热 门</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7158/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>php 简单的 单例模式						</a>
+						<span>2020-03-19</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">热 门</div>
+				<article class="ulist">
+					<h2>
+						<a target="_blank" href="/post/7157/" title="" rel="bookmark" >
+							<i class="icon-eject icon-large"></i>Mysql复制方式(半同步复制，并行复制，多源复制)						</a>
+						<span>2020-03-19</span>
+					</h2>
+				</article>
+			</div>
+					</div>
+				<div class="cls"></div>
+		<!--热门教程start-->
+								<div class="top_post">
+				<div class="titlecom">教 程</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/j/web/1001595/" title="W3C词汇和术语表">
+							<i class="icon-eject icon-large"></i>W3C词汇和术语表						</a>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">教 程</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/j/php7/1001249/" title="PHP7弃用的功能">
+							<i class="icon-eject icon-large"></i>PHP7弃用的功能						</a>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">教 程</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/j/php7/1001248/" title="PHP7 Session选项">
+							<i class="icon-eject icon-large"></i>PHP7 Session选项						</a>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">教 程</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/j/php7/1001247/" title="PHP7整数除法">
+							<i class="icon-eject icon-large"></i>PHP7整数除法						</a>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">教 程</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/j/php7/1001237/" title="PHP7 Null合并运算符">
+							<i class="icon-eject icon-large"></i>PHP7 Null合并运算符						</a>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="titlecom">教 程</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/j/php7/1001235/" title="PHP7标量类型声明">
+							<i class="icon-eject icon-large"></i>PHP7标量类型声明						</a>
+					</h2>
+				</article>
+			</div>
+							<!--热门教程end-->
+		<div class="cls"></div>
+		<!--热门代码片段-->
+				<div class="top_box">
+						<div class="top_post">
+				<div class="title">代码片段</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/code/1010009/" title="">
+							<i class="icon-eject icon-large"></i>简易的ORM类						</a>
+						<span>2018-07-09</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">代码片段</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/code/1010008/" title="">
+							<i class="icon-eject icon-large"></i>PHP 实现文章内容自动分页类						</a>
+						<span>2017-10-23</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">代码片段</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/code/1010007/" title="">
+							<i class="icon-eject icon-large"></i>iOS本地推送						</a>
+						<span>2017-09-29</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">代码片段</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/code/1010006/" title="">
+							<i class="icon-eject icon-large"></i>汉字转拼音						</a>
+						<span>2017-09-29</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">代码片段</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/code/1010005/" title="">
+							<i class="icon-eject icon-large"></i>C++利用链栈实现表达式求值						</a>
+						<span>2017-09-29</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">代码片段</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/code/1010004/" title="">
+							<i class="icon-eject icon-large"></i>用来计算时间差的js代码片段						</a>
+						<span>2017-09-29</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">代码片段</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/code/1010003/" title="">
+							<i class="icon-eject icon-large"></i>基于GO的百价网api调用代码实例						</a>
+						<span>2017-09-29</span>
+					</h2>
+				</article>
+			</div>
+						<div class="top_post">
+				<div class="title">代码片段</div>
+				<article class="ulist">
+					<h2>
+						<a rel="bookmark" target="_blank" href="/code/1010002/" title="">
+							<i class="icon-eject icon-large"></i>android scrollview 滚动到最底部						</a>
+						<span>2017-09-29</span>
+					</h2>
+				</article>
+			</div>
+					</div>
+				<!--热门代码片段end-->
+		<div class="cls"></div>
+								<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7156">
+					<div class="datetime">
+						2020<br>03-18					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7156/" title="【shell脚本】字符串和数组的使用" rel="bookmark">【shell脚本】字符串和数组的使用</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 211°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7156" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7156/" class="disp_a" rel="bookmark" title="【shell脚本】字符串和数组的使用">
+													<img src="/uploads/202003/18/df2ebcc67dc3379c9f9c2d049ed87660.jpg" alt="【shell脚本】字符串和数组的使用" />
+												可以使用单引号和双引号定义字符串变量但是单引号中不支持变量解析     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7156/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7155">
+					<div class="datetime">
+						2020<br>03-18					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7155/" title="php封装的sqlite操作类" rel="bookmark">php封装的sqlite操作类</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 211°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7155" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7155/" class="disp_a" rel="bookmark" title="php封装的sqlite操作类">
+													<img src="/uploads/202003/18/afcbdd5a07e7e773495a218332c56881.jpg" alt="php封装的sqlite操作类" />
+												sqlite在php中是默认安装的本地小型化数据库，类似于xml的小型数据库，但sqlite功能更强。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7155/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7154">
+					<div class="datetime">
+						2020<br>03-18					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7154/" title="php项目中类的自动加载" rel="bookmark">php项目中类的自动加载</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 181°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7154" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7154/" class="disp_a" rel="bookmark" title="php项目中类的自动加载">
+													<img src="/uploads/202003/18/cb1d99f44285e287c756b02157479ea9.jpg" alt="php项目中类的自动加载" />
+												主要函数：spl_autoload_register() — 注册给定的函数作为 __autoload() 的实现     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7154/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7153">
+					<div class="datetime">
+						2020<br>03-18					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7153/" title="几行php代码把数据格式化成树形结构" rel="bookmark">几行php代码把数据格式化成树形结构</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 181°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7153" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7153/" class="disp_a" rel="bookmark" title="几行php代码把数据格式化成树形结构">
+													<img src="/uploads/202003/18/e840a63f8de395521a4cccd2a0a1c7e7.jpg" alt="几行php代码把数据格式化成树形结构" />
+												上代码：&lt;?php/***将数据格式化成树形结构*@authorXuefen.Tong*@paramarray$items*@returnarray*/functiongenTree5($items){foreach($itemsas$item){$items[$item['pid']]['son'][$item['id']]=&amp;$items[$item['id']];}returnisset($items[0]['son'])?$items[0]['son']:array();}functiongenTree9($items){$tree=array();//格式化好的树foreach($itemsas$item)...     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7153/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7151">
+					<div class="datetime">
+						2020<br>03-18					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7151/" title="PHP实现redis的批量操作命令pipeline" rel="bookmark">PHP实现redis的批量操作命令pipeline</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 241°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7151" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7151/" class="disp_a" rel="bookmark" title="PHP实现redis的批量操作命令pipeline">
+													<img src="/uploads/202003/18/8f6aba246d87ff618cb4463fbdcb6c77.jpg" alt="PHP实现redis的批量操作命令pipeline" />
+												以上内容希望帮助到大家，很多PHPer在进阶的时候总会遇到一些问题和瓶颈，业务代码写多了没有方向感，不知道该从那里入手去提升，对此我整理了一些资料，包括但不限于：分布式架构、高可扩展、高性能、高并发、服务器性能调优、TP6，laravel，YII2，Redis，Swoole、Swoft、Kafka、Mysql优化、shell脚本、Docker、微服务、Nginx等多个知识点高级进阶干货需要的可以免费分享给大家，     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7151/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7152">
+					<div class="datetime">
+						2020<br>03-18					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7152/" title="PHP利用nginx的X-sendfile控制下载，提高下载效率" rel="bookmark">PHP利用nginx的X-sendfile控制下载，提高下载效率</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 271°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7152" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7152/" class="disp_a" rel="bookmark" title="PHP利用nginx的X-sendfile控制下载，提高下载效率">
+													<img src="/uploads/202003/18/01ca714f81c2e14157c46f9f679b120c.jpg" alt="PHP利用nginx的X-sendfile控制下载，提高下载效率" />
+												为了控制静态文件下载，
+
+一般方法需要PHP用file_get_contents读取文件，再传给客户端。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7152/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7148">
+					<div class="datetime">
+						2020<br>03-17					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7148/" title="2020 重学 Go 系列：09. 一篇文章理解 Go 里的函数" rel="bookmark">2020 重学 Go 系列：09. 一篇文章理解 Go 里的函数</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 361°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7148" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7148/" class="disp_a" rel="bookmark" title="2020 重学 Go 系列：09. 一篇文章理解 Go 里的函数">
+													<img src="/uploads/202003/17/a1471bb3cd1fad4707bba124925ecb3f.jpg" alt="2020 重学 Go 系列：09. 一篇文章理解 Go 里的函数" />
+												函数是基于功能或 逻辑进行封装的可复用的代码结构。将一段功能复杂、很长的一段代码封装成多个代码片段（即函数），有助于提高代码可读性和可维护性。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7148/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7147">
+					<div class="datetime">
+						2020<br>03-17					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7147/" title=" 2020 重学 Go 系列：10. Go语言流程控制：if-else? 条件语句" rel="bookmark"> 2020 重学 Go 系列：10. Go语言流程控制：if-else? 条件语句</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 361°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7147" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7147/" class="disp_a" rel="bookmark" title=" 2020 重学 Go 系列：10. Go语言流程控制：if-else? 条件语句">
+													<img src="/uploads/202003/17/d7187b6ac2ae1a3c3b80905d627db602.jpg" alt=" 2020 重学 Go 系列：10. Go语言流程控制：if-else? 条件语句" />
+												Go里的流程控制方法还是挺丰富，整理了下有如下这么多种：
+
+if - else 条件语句
+switch - case 选择语句
+for - range 循环语句
+goto 无条件跳转语句
+defer 延迟执行     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7147/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7150">
+					<div class="datetime">
+						2020<br>03-17					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7150/" title="2020 重学 Go 系列：07. 详解数据类型：指针" rel="bookmark">2020 重学 Go 系列：07. 详解数据类型：指针</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 391°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7150" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7150/" class="disp_a" rel="bookmark" title="2020 重学 Go 系列：07. 详解数据类型：指针">
+													<img src="/uploads/202003/17/89caf36c2a70a1ebd3db40f328670140.jpg" alt="2020 重学 Go 系列：07. 详解数据类型：指针" />
+												根据变量指向的值，是否是内存地址，我把变量分为两种：
+普通变量：存数据值本身
+指针变量：存值的内存地址     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7150/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7149">
+					<div class="datetime">
+						2020<br>03-17					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7149/" title="2020 重学 Go 系列：08. 面向对象编程：结构体与继承" rel="bookmark">2020 重学 Go 系列：08. 面向对象编程：结构体与继承</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 391°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7149" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7149/" class="disp_a" rel="bookmark" title="2020 重学 Go 系列：08. 面向对象编程：结构体与继承">
+													<img src="/uploads/202003/17/5e40599e8aec16be7c98561090e18b54.jpg" alt="2020 重学 Go 系列：08. 面向对象编程：结构体与继承" />
+												在之前学过的数据类型中，数组与切片，只能存储同一类型的变量。若要存储多个类型的变量，就需要用到结构体，它是将多个容易类型的命令变量组合在一起的聚合数据类型。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7149/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7146">
+					<div class="datetime">
+						2020<br>03-16					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7146/" title="Micro In Action(三)：调用服务" rel="bookmark">Micro In Action(三)：调用服务</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 361°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7146" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7146/" class="disp_a" rel="bookmark" title="Micro In Action(三)：调用服务">
+													<img src="/uploads/202003/16/6396023d34aa25176ab405ed91731111.png" alt="Micro In Action(三)：调用服务" />
+												本文讨论了如何调用一个已经存在服务。
+micro 提供了丰富的工具， 可以用来在运行时查看服务状态及调用服务方法。这其中既有命令行工具， 也有基于 web 界面工具。
+最后，我们创建了一个客户端项目，用代码真正完成了服务的调用。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7146/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7145">
+					<div class="datetime">
+						2020<br>03-16					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7145/" title="一次 golang fasthttp 踩坑经验" rel="bookmark">一次 golang fasthttp 踩坑经验</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 481°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7145" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7145/" class="disp_a" rel="bookmark" title="一次 golang fasthttp 踩坑经验">
+												以上就是这次经验之谈，切记，使用 fasthttp 的时候，加上 ReadTimeout 字段。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7145/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7144">
+					<div class="datetime">
+						2020<br>03-16					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7144/" title="Go1.14 的这个改进让 Gopher 生活更美好" rel="bookmark">Go1.14 的这个改进让 Gopher 生活更美好</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 481°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7144" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7144/" class="disp_a" rel="bookmark" title="Go1.14 的这个改进让 Gopher 生活更美好">
+													<img src="/uploads/202003/16/5d408d36a4dfd18ffad7012ef34a5118.jpg" alt="Go1.14 的这个改进让 Gopher 生活更美好" />
+												testing 包是 Go 标准库中我最喜欢的程序包之一，不仅是它具有低干扰的单元测试方法，而且在 Go 的整个生命周期中，它可以改善、提高生活质量 ^_^。
+在 Go1.14 中，go test -v 将使 t.Log 的输出变成流式，而不是在测试运行结束之前进行存储，最后一起输出。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7144/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7143">
+					<div class="datetime">
+						2020<br>03-14					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7143/" title="解析和提交 HTML 表单的库：gosubmit" rel="bookmark">解析和提交 HTML 表单的库：gosubmit</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 571°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7143" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7143/" class="disp_a" rel="bookmark" title="解析和提交 HTML 表单的库：gosubmit">
+												项目地址：https://github.com/jeremija/gosubmit，发布刚半个月。该库帮助在测试过程中填写纯HTML表单。将自动从表单中获取现有值，因此无需手动设置诸如csrf令牌之类的东西。在缺少必填字段或模式验证不匹配时发出警报。支持的表单元素input[type=checkbox]input[type=date]input[type=email]input[type=hidden]input[type=number]input[type=radio]input[type=text]input[type=url]t...     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7143/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7142">
+					<div class="datetime">
+						2020<br>03-14					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7142/" title="用面向对象设计原则理解 Go 中 interface" rel="bookmark">用面向对象设计原则理解 Go 中 interface</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 571°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7142" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7142/" class="disp_a" rel="bookmark" title="用面向对象设计原则理解 Go 中 interface">
+												1、interface是方法声明的集合
+2、任何类型的对象实现了在interface接口中声明的全部方法，则表明该类型实现了接口。
+3、interface可以作为一种数据类型，实现了该接口的任何对象都可以给对应的接口类型变量赋值。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7142/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7141">
+					<div class="datetime">
+						2020<br>03-14					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7141/" title="Micro In Action(二)：项目结构与启动过程" rel="bookmark">Micro In Action(二)：项目结构与启动过程</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 631°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7141" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7141/" class="disp_a" rel="bookmark" title="Micro In Action(二)：项目结构与启动过程">
+													<img src="/uploads/202003/14/407d64e50e8037e1660aa1d107fa9e09.jpg" alt="Micro In Action(二)：项目结构与启动过程" />
+												本文是 Micro in Action 系列的第二篇文章， 我们作了几件事：
+
+介绍了上篇文章所创建的项目结构， 说明每一个文件的用途。
+对照源码逐行分析一个 Micro 服务的启动过程。
+考虑到 Micro 文档的缺失， 本文完整介绍了创建 Micro 服务所支持的全部 Option
+最后用 micro web 查看了服务的运行时状态     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7141/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7140">
+					<div class="datetime">
+						2020<br>03-13					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7140/" title="神奇了！这个 Go 项目让前端构建快了近 100 倍" rel="bookmark">神奇了！这个 Go 项目让前端构建快了近 100 倍</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 661°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7140" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7140/" class="disp_a" rel="bookmark" title="神奇了！这个 Go 项目让前端构建快了近 100 倍">
+													<img src="/uploads/202003/13/57f019f97a2dda3b1b3e335c6e760ad4.jpg" alt="神奇了！这个 Go 项目让前端构建快了近 100 倍" />
+												这是作者 2019-2020 年寒假期间写的一项业余爱好项目。我相信它是相对完整和实用的。但是，它是全新的代码，可能有很多错误。还没有任何人在生产中使用过它。合并运算符。
+此外，官方还给了如何和 React 配合使用。
+目前，该项目在 Github 上已收获 3400+ Star，并有 51 个 fork。近期增长很快，总在 GitHub 趋势榜。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7140/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7139">
+					<div class="datetime">
+						2020<br>03-13					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7139/" title="官方博文：使用 Go Cloud 的 Wire 进行编译时依赖注入" rel="bookmark">官方博文：使用 Go Cloud 的 Wire 进行编译时依赖注入</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 691°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7139" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7139/" class="disp_a" rel="bookmark" title="官方博文：使用 Go Cloud 的 Wire 进行编译时依赖注入">
+													<img src="/uploads/202003/13/ed0d56b19fc29245aa2ef2a0b8ea6108.jpg" alt="官方博文：使用 Go Cloud 的 Wire 进行编译时依赖注入" />
+												Go 团队公布了用于开放云开发的可移植云 API 和工具，开源项目Go Cloud 。这篇文章详细介绍了 Wire，一个随 Go Cloud 提供的依赖注入工具。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7139/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7138">
+					<div class="datetime">
+						2020<br>03-13					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7138/" title="map 并发崩溃一例：顺便吐槽 Go 打印堆栈不友好" rel="bookmark">map 并发崩溃一例：顺便吐槽 Go 打印堆栈不友好</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 661°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7138" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7138/" class="disp_a" rel="bookmark" title="map 并发崩溃一例：顺便吐槽 Go 打印堆栈不友好">
+													<img src="/uploads/202003/13/81f169c82148505178a7dd944f9e5d9f.jpg" alt="map 并发崩溃一例：顺便吐槽 Go 打印堆栈不友好" />
+												如若在实践中碰到了类似的 bug，只能好好读代码，别无他法，甩锅给离职员工是解决不了问题的。
+如果你手边的代码抽象程度比较高，比如函数的参数都是一些 interface，由运行期来决定，那可能要定位这种 bug 就更费劲一些。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7138/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+						<article class="post_box lazyload_fadeIn">
+				<div class="c-top" id="post-7137">
+					<div class="datetime">
+						2020<br>03-13					</div>	
+					<header class="tit">
+						<h2 class="h1">
+                            <a target="_blank" href="/post/7137/" title="一文读懂 Go官方的 Wire" rel="bookmark">一文读懂 Go官方的 Wire</a> 
+                                                        </h2>
+						<aside class="iititle">
+							<span>
+								<i class="icon-eye-open icon-large"></i> 691°C
+							</span>
+							<span>
+								<i class="icon-comment-alt icon-large"></i> 
+								<span id = "sourceId::7137" class = "cy_cmt_count" ></span>
+							</span>
+						</aside>
+					</header>
+				</div>
+				<div class="c-con">    
+					<a target="_blank" href="/post/7137/" class="disp_a" rel="bookmark" title="一文读懂 Go官方的 Wire">
+													<img src="/uploads/202003/13/62327ea61c285690749fa9c2040748a9.jpg" alt="一文读懂 Go官方的 Wire" />
+												以上详细介绍了 wire 的概念、特点、使用方法及各种高级特性。
+希望能帮你掌握这个小巧却强大的工具。     
+					</a>
+					<a rel="bookmark" target="_blank" href="/post/7137/" class="more-link">继续阅读 &gt;</a><div class="cls"></div>
+				</div>
+				<div class="c-bot">
+					<aside class="cb_bq tagcloud tagcloudlist">
+						<i class="icon-tag icon-large"></i> 
+						<!--标签-->
+												<!--/标签-->
+					</aside>     
+					<div class="cls"></div>
+				</div>
+			</article>
+							<div class="cls"></div>
+		
+	</div>
+<!--畅言评论获取js-->
+<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysj1uQ29"></script>
+<!--畅言js end-->
+<script type="text/javascript">loading('55%',350)</script>
+<aside id="primary" class="side" role="complementary">
+	<ul class="xoxo">
+        <li class="widget-container widget_text">
+            <h3 class="widget-title">7月热门书免费送</h3>
+            <ul class="xoxo siteInfo">
+            <div class="textwidget">
+                <div class="d3_btn">
+                    <a class="down_theme"></a>
+                </div>
+                <div class="cls"></div>
+            </div>
+            </ul>
+        </li>
+		<li class="widget-container widget_tag_cloud">
+			<h3 class="widget-title">热点疑问</h3>
+			<ul class="advanced-random-posts">
+								<li><a href="http://www.phpxs.com/post/4905" target="_blank" title="学习编程5个常见的疑问">学习编程5个常见的疑问</a></li>
+								<li><a href="http://www.phpxs.com/post/4303" target="_blank" title="教你自学编程从哪开始？">教你自学编程从哪开始？</a></li>
+								<li><a href="http://www.phpxs.com/post/4919" target="_blank" title="你在编程的时候浪费了多少时间？">你在编程的时候浪费了多少时间？</a></li>
+								<li><a href="http://www.phpxs.com/post/1583" target="_blank" title="想学编程？你可以这样开始！">想学编程？你可以这样开始！</a></li>
+							</ul>
+		</li>
+		<li class="widget-container widget_links">
+			<h3 class="widget-title">编程教程</h3>   			
+			<ul class="xoxo siteInfo">
+								<li><a href="/j/appml/" title="AppML 教程" target="_blank">AppML 教程</a></li>
+								<li><a href="/j/php/" title="PHP 教程" target="_blank">PHP 教程</a></li>
+								<li><a href="/j/html5/" title="HTML5 教程" target="_blank">HTML5 教程</a></li>
+								<li><a href="/j/python/" title="Python 教程" target="_blank">Python 教程</a></li>
+								<li><a href="/j/mysql/" title="MySql 教程" target="_blank">MySql 教程</a></li>
+								<li><a href="/j/redis/" title="Redis 教程" target="_blank">Redis 教程</a></li>
+								<li><a href="/j/jquery/" title="jQuery 教程" target="_blank">jQuery 教程</a></li>
+								<li><a href="/j/js/" title="JavaScript 教程" target="_blank">JavaScript 教程</a></li>
+								<li><a href="/j/html/" title="HTML 教程" target="_blank">HTML 教程</a></li>
+								<li><a href="/j/css/" title="CSS 教程" target="_blank">CSS 教程</a></li>
+								<li><a href="/j/linux/" title="Linux 教程" target="_blank">Linux 教程</a></li>
+								<li><a href="/j/json/" title="JSON 教程" target="_blank">JSON 教程</a></li>
+								<li><a href="/j/http/" title="HTTP 教程" target="_blank">HTTP 教程</a></li>
+								<li><a href="/j/design/" title="设计模式" target="_blank">设计模式</a></li>
+								<li><a href="/j/sql/" title="SQL 教程" target="_blank">SQL 教程</a></li>
+								<li><a href="/j/xml/" title="XML 教程" target="_blank">XML 教程</a></li>
+								<li><a href="/j/memcached/" title="Memcached 教程" target="_blank">Memcached 教程</a></li>
+								<li><a href="/j/mongodb/" title="MongoDB 教程" target="_blank">MongoDB 教程</a></li>
+								<li><a href="/j/regexp/" title="正则表达式" target="_blank">正则表达式</a></li>
+								<li><a href="/j/jqueryui/" title="jQuery UI 教程" target="_blank">jQuery UI 教程</a></li>
+								<li><a href="/j/java/" title="Java 教程" target="_blank">Java 教程</a></li>
+								<li><a href="/j/php7/" title="PHP7 教程" target="_blank">PHP7 教程</a></li>
+								<li><a href="/j/git/" title="Git 教程" target="_blank">Git 教程</a></li>
+								<li><a href="/j/ios/" title="iOS 教程" target="_blank">iOS 教程</a></li>
+								<li><a href="/j/sqlite/" title="SQLite 教程" target="_blank">SQLite 教程</a></li>
+								<li><a href="/j/python3/" title="Python3 教程" target="_blank">Python3 教程</a></li>
+								<li><a href="/j/firebug/" title="Firebug 教程" target="_blank">Firebug 教程</a></li>
+								<li><a href="/j/aspnet/" title="ASP.NET 教程" target="_blank">ASP.NET 教程</a></li>
+								<li><a href="/j/csharp/" title="C# 教程" target="_blank">C# 教程</a></li>
+								<li><a href="/j/ruby/" title="Ruby 教程" target="_blank">Ruby 教程</a></li>
+								<li><a href="/j/android/" title="Android 教程" target="_blank">Android 教程</a></li>
+								<li><a href="/j/css3/" title="CSS3 教程" target="_blank">CSS3 教程</a></li>
+								<li><a href="/j/ajax/" title="AJAX 教程" target="_blank">AJAX 教程</a></li>
+								<li><a href="/j/nodejs/" title="Node.js教程" target="_blank">Node.js教程</a></li>
+								<li><a href="/j/svn/" title="SVN 教程" target="_blank">SVN 教程</a></li>
+								<li><a href="/j/yii2/" title="Yii2.0 视频教程" target="_blank">Yii2.0 视频教程</a></li>
+								<li><a href="/j/cssguifan/" title="CSS 规范" target="_blank">CSS 规范</a></li>
+								<li><a href="/j/ionic/" title="ionic 教程" target="_blank">ionic 教程</a></li>
+								<li><a href="/j/servlet/" title="Servlet 教程" target="_blank">Servlet 教程</a></li>
+								<li><a href="/j/jsp/" title="JSP 教程" target="_blank">JSP 教程</a></li>
+								<li><a href="/j/rss/" title="RSS 教程" target="_blank">RSS 教程</a></li>
+								<li><a href="/j/lua/" title="Lua 教程" target="_blank">Lua 教程</a></li>
+								<li><a href="/j/cplusplus/" title="C++ 教程" target="_blank">C++ 教程</a></li>
+								<li><a href="/j/eclipse/" title="Eclipse 教程" target="_blank">Eclipse 教程</a></li>
+								<li><a href="/j/angularjs/" title="AngularJs 教程" target="_blank">AngularJs 教程</a></li>
+								<li><a href="/j/react/" title="React 教程" target="_blank">React 教程</a></li>
+								<li><a href="/j/highcharts/" title="Highcharts 教程" target="_blank">Highcharts 教程</a></li>
+								<li><a href="/j/django/" title="Django 教程" target="_blank">Django 教程</a></li>
+								<li><a href="/j/docker/" title="Docker 教程" target="_blank">Docker 教程</a></li>
+								<li><a href="/j/perl/" title="Perl 教程" target="_blank">Perl 教程</a></li>
+								<li><a href="/j/scala/" title="Scala 教程" target="_blank">Scala 教程</a></li>
+								<li><a href="/j/go/" title="Go 语言教程" target="_blank">Go 语言教程</a></li>
+								<li><a href="/j/swift/" title="Swift 教程" target="_blank">Swift 教程</a></li>
+								<li><a href="/j/dtd/" title="DTD 教程" target="_blank">DTD 教程</a></li>
+								<li><a href="/j/dom/" title="XML DOM 教程" target="_blank">XML DOM 教程</a></li>
+								<li><a href="/j/xsl/" title="XSLT 教程" target="_blank">XSLT 教程</a></li>
+								<li><a href="/j/xpath/" title="XPath 教程" target="_blank">XPath 教程</a></li>
+								<li><a href="/j/xquery/" title="XQuery 教程" target="_blank">XQuery 教程</a></li>
+								<li><a href="/j/svg/" title="SVG 教程" target="_blank">SVG 教程</a></li>
+								<li><a href="/j/web/" title="网站建设指南" target="_blank">网站建设指南</a></li>
+								<li><a href="/j/hosting/" title="网站主机教程" target="_blank">网站主机教程</a></li>
+								<li><a href="/j/tcpip/" title="TCP/IP 教程" target="_blank">TCP/IP 教程</a></li>
+								<li><a href="/j/quality/" title="网站品质 教程" target="_blank">网站品质 教程</a></li>
+								<li><a href="/j/googlehosts/" title="Google hosts" target="_blank">Google hosts</a></li>
+								<li><a href="/j/golong/" title="GO语言" target="_blank">GO语言</a></li>
+							</ul>
+		</li>	
+				<li class="widget-container widget_links">
+			<h3 class="widget-title">热门关键词</h3>
+			<ul class="xoxo siteInfo">
+								<li><a href="http://www.phpxs.com/code/php" target="_blank">PHP代码分享</a></li>
+								<li><a href="http://www.phpxs.com/post/phpGaoji" target="_blank">PHP进价</a></li>
+								<li><a href="http://www.phpxs.com/post/yii2" target="_blank">Yii2.0教程</a></li>
+								<li><a href="http://www.phpxs.com/post/mysql" target="_blank">MySql优化</a></li>
+								<li><a href="http://www.phpxs.com/post/2901" target="_blank">PHP下载</a></li>
+								<li><a href="http://www.phpxs.com/post/code" target="_blank">代码</a></li>
+							</ul>
+		</li>
+				<li class="widget-container widget_tag_cloud">
+			<h3 class="widget-title">猜您喜欢</h3>
+			<ul class="advanced-random-posts">
+								<li><a href="http://www.phpxs.com/post/3319" target="_blank" title="攻下隔壁女生路由器后，我都做了些什么">攻下隔壁女生路由器后，我都做了些什么</a></li>
+								<li><a href="http://www.phpxs.com/post/3134" target="_blank" title="趣事！一根网线发起的攻击">趣事！一根网线发起的攻击</a></li>
+								<li><a href="http://www.phpxs.com/post/3434" target="_blank" title="程序员学习编程需要攻克的8个障碍">程序员学习编程需要攻克的8个障碍</a></li>
+							</ul>
+		</li>
+		<li class="widget-container widget_advancedrandomposts">
+			<h3 class="widget-title">热门教程</h3>
+			<ul class="advanced-random-posts">
+												<li><a href="/j/web/1001595/" target="_blank" title="W3C词汇和术语表">W3C词汇和术语表</a></li>
+								<li><a href="/j/svn/1001052/" target="_blank" title="SVN快速入门教程">SVN快速入门教程</a></li>
+								<li><a href="/j/php7/1001051/" target="_blank" title="PHP 7 的几个新特性">PHP 7 的几个新特性</a></li>
+								<li><a href="/j/cssguifan/1001049/" target="_blank" title="CSS 典型错误">CSS 典型错误</a></li>
+								<li><a href="/j/yii2/1001043/" target="_blank" title="Yii2.0视频第十五讲——角色、权限——rbac">Yii2.0视频第十五讲——角色、权限——rbac</a></li>
+								<li><a href="/j/redis/1000874/" target="_blank" title="使用Redis 建议/技巧">使用Redis 建议/技巧</a></li>
+							</ul>
+		</li>
+		<li class="widget-container widget_links">
+			<h3 class="widget-title">必备工具</h3>     
+			<ul class="xoxo siteInfo">
+				<li><a href="/tools/json/" target="_blank">JSON在线解析</a></li>
+				<li><a href="/tools/ip/" target="_blank">IP地址查询</a></li>
+				<li><a href="/tools/web/" target="_blank">JS/HTML/CSS格式化</a></li>
+			</ul>
+		</li>
+		<li id="advancedrandomposts-5" class="widget-container widget_advancedrandomposts">
+			<h3 class="widget-title">近期排行</h3>
+			<ul class="advanced-random-posts">
+								<li><a href="/post/7038/" target="_blank" title="yii2实现 "上一篇,下一篇" 功能的代码实例">yii2实现 "上一篇,下一篇" 功能的代码实例</a></li>
+								<li><a href="/post/7037/" target="_blank" title="Laravel 类和接口注入相关的代码">Laravel 类和接口注入相关的代码</a></li>
+								<li><a href="/post/7034/" target="_blank" title="Go语言学习小记">Go语言学习小记</a></li>
+								<li><a href="/post/7051/" target="_blank" title="Laravel中七个非常有用但很少人知道的Carbon方法">Laravel中七个非常有用但很少人知道的Carbon方法</a></li>
+								<li><a href="/post/7096/" target="_blank" title="GoAdmin v1.2.4 版本发布">GoAdmin v1.2.4 版本发布</a></li>
+								<li><a href="/post/7100/" target="_blank" title="6 个 K8s 日志系统建设中的典型问题，你遇到过几个？">6 个 K8s 日志系统建设中的典型问题，你遇到过几个？</a></li>
+								<li><a href="/post/7039/" target="_blank" title="Tips:如何优雅的使用GDB调试Go">Tips:如何优雅的使用GDB调试Go</a></li>
+								<li><a href="/post/7040/" target="_blank" title="Go Web：自带的ServeMux multiplexer">Go Web：自带的ServeMux multiplexer</a></li>
+								<li><a href="/post/7050/" target="_blank" title="Yii2使用$this->context获取当前的Module、Controller(控制器)、Action等">Yii2使用$this->context获取当前的Module、Controller(控制器)、Action等</a></li>
+								<li><a href="/post/7081/" target="_blank" title="编辑器 VS Code 如何快速查看 Go 接口？">编辑器 VS Code 如何快速查看 Go 接口？</a></li>
+							</ul>
+		</li>
+		<li id="tag_cloud-2" class="widget-container widget_tag_cloud">
+			<h3 class="widget-title">热门标签</h3>
+			<div class="tagcloud">
+									<a class="tag-link-0" href="/tag/smtp/" target="_blank" title="smtp共有5条内容">smtp (5)</a>
+									<a class="tag-link-1" href="/tag/%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank" title="邮件服务器共有5条内容">邮件服务器 (5)</a>
+									<a class="tag-link-2" href="/tag/lamp/" target="_blank" title="lamp共有5条内容">lamp (5)</a>
+									<a class="tag-link-3" href="/tag/%E7%B4%A2%E5%BC%95/" target="_blank" title="索引共有5条内容">索引 (5)</a>
+									<a class="tag-link-4" href="/tag/%E5%85%B3%E9%94%AE%E8%AF%8D/" target="_blank" title="关键词共有5条内容">关键词 (5)</a>
+									<a class="tag-link-5" href="/tag/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/" target="_blank" title="敏捷开发共有5条内容">敏捷开发 (5)</a>
+									<a class="tag-link-6" href="/tag/%E5%90%8E%E7%AB%AF/" target="_blank" title="后端共有5条内容">后端 (5)</a>
+									<a class="tag-link-7" href="/tag/%E7%A1%85%E8%B0%B7/" target="_blank" title="硅谷共有5条内容">硅谷 (5)</a>
+									<a class="tag-link-8" href="/tag/%E4%BA%BA%E7%94%9F/" target="_blank" title="人生共有5条内容">人生 (5)</a>
+									<a class="tag-link-9" href="/tag/%E4%B9%94%E5%B8%83%E6%96%AF/" target="_blank" title="乔布斯共有5条内容">乔布斯 (5)</a>
+									<a class="tag-link-10" href="/tag/%E6%9E%B6%E6%9E%84%E5%B8%88/" target="_blank" title="架构师共有5条内容">架构师 (5)</a>
+									<a class="tag-link-11" href="/tag/%E6%94%B9%E5%8F%98/" target="_blank" title="改变共有5条内容">改变 (5)</a>
+									<a class="tag-link-12" href="/tag/%E5%B7%A5%E5%85%B7/" target="_blank" title="工具共有5条内容">工具 (5)</a>
+									<a class="tag-link-13" href="/tag/%E5%81%A5%E5%BA%B7/" target="_blank" title="健康共有5条内容">健康 (5)</a>
+									<a class="tag-link-14" href="/tag/Amazon/" target="_blank" title="Amazon共有5条内容">Amazon (5)</a>
+									<a class="tag-link-15" href="/tag/%E5%88%9B%E4%B8%9A%E5%85%AC%E5%8F%B8/" target="_blank" title="创业公司共有5条内容">创业公司 (5)</a>
+									<a class="tag-link-16" href="/tag/%E4%BA%AC%E4%B8%9C/" target="_blank" title="京东共有5条内容">京东 (5)</a>
+									<a class="tag-link-17" href="/tag/%E7%94%B5%E5%95%86/" target="_blank" title="电商共有5条内容">电商 (5)</a>
+									<a class="tag-link-18" href="/tag/iPad/" target="_blank" title="iPad共有5条内容">iPad (5)</a>
+									<a class="tag-link-19" href="/tag/360/" target="_blank" title="360共有5条内容">360 (5)</a>
+									<a class="tag-link-20" href="/tag/%E7%94%9F%E6%B4%BB/" target="_blank" title="生活共有5条内容">生活 (5)</a>
+									<a class="tag-link-21" href="/tag/%E4%BC%98%E9%9B%85/" target="_blank" title="优雅共有5条内容">优雅 (5)</a>
+									<a class="tag-link-22" href="/tag/%E8%AE%BE%E8%AE%A1%E5%B8%88/" target="_blank" title="设计师共有5条内容">设计师 (5)</a>
+									<a class="tag-link-23" href="/tag/%E9%94%99%E8%AF%AF/" target="_blank" title="错误共有5条内容">错误 (5)</a>
+									<a class="tag-link-24" href="/tag/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" target="_blank" title="游戏开发共有5条内容">游戏开发 (5)</a>
+									<a class="tag-link-25" href="/tag/flash/" target="_blank" title="flash共有5条内容">flash (5)</a>
+									<a class="tag-link-26" href="/tag/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" target="_blank" title="浏览器插件共有5条内容">浏览器插件 (5)</a>
+									<a class="tag-link-27" href="/tag/%E6%BA%90%E7%A0%81/" target="_blank" title="源码共有5条内容">源码 (5)</a>
+									<a class="tag-link-28" href="/tag/history/" target="_blank" title="history共有5条内容">history (5)</a>
+									<a class="tag-link-29" href="/tag/pushState/" target="_blank" title="pushState共有5条内容">pushState (5)</a>
+									<a class="tag-link-30" href="/tag/Golang/" target="_blank" title="Golang共有5条内容">Golang (5)</a>
+									<a class="tag-link-31" href="/tag/Docker/" target="_blank" title="Docker共有5条内容">Docker (5)</a>
+									<a class="tag-link-32" href="/tag/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" target="_blank" title="函数式编程共有5条内容">函数式编程 (5)</a>
+									<a class="tag-link-33" href="/tag/%E6%8E%92%E8%A1%8C%E6%A6%9C/" target="_blank" title="排行榜共有5条内容">排行榜 (5)</a>
+									<a class="tag-link-34" href="/tag/2014/" target="_blank" title="2014共有5条内容">2014 (5)</a>
+									<a class="tag-link-35" href="/tag/%E7%BA%BF%E7%A8%8B/" target="_blank" title="线程共有5条内容">线程 (5)</a>
+									<a class="tag-link-36" href="/tag/Excel/" target="_blank" title="Excel共有5条内容">Excel (5)</a>
+									<a class="tag-link-37" href="/tag/Laravel/" target="_blank" title="Laravel共有5条内容">Laravel (5)</a>
+									<a class="tag-link-38" href="/tag/%E5%A5%B3%E6%9C%8B%E5%8F%8B/" target="_blank" title="女朋友共有5条内容">女朋友 (5)</a>
+									<a class="tag-link-39" href="/tag/%E5%B9%B4%E7%BB%88%E5%A5%96/" target="_blank" title="年终奖共有5条内容">年终奖 (5)</a>
+									<a class="tag-link-40" href="/tag/%E5%88%86%E9%A1%B5/" target="_blank" title="分页共有5条内容">分页 (5)</a>
+									<a class="tag-link-41" href="/tag/php7/" target="_blank" title="php7共有5条内容">php7 (5)</a>
+									<a class="tag-link-42" href="/tag/React/" target="_blank" title="React共有5条内容">React (5)</a>
+									<a class="tag-link-43" href="/tag/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" target="_blank" title="网络技术共有5条内容">网络技术 (5)</a>
+									<a class="tag-link-44" href="/tag/ECMAScript/" target="_blank" title="ECMAScript共有5条内容">ECMAScript (5)</a>
+									<a class="tag-link-45" href="/tag/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" target="_blank" title="小程序开发共有5条内容">小程序开发 (5)</a>
+									<a class="tag-link-46" href="/tag/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3/" target="_blank" title="数据库相关共有5条内容">数据库相关 (5)</a>
+									<a class="tag-link-47" href="/tag/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" target="_blank" title="网络爬虫共有5条内容">网络爬虫 (5)</a>
+									<a class="tag-link-48" href="/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" target="_blank" title="神经网络共有5条内容">神经网络 (5)</a>
+									<a class="tag-link-49" href="/tag/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" target="_blank" title="微服务共有5条内容">微服务 (5)</a>
+				                <a class="tag-link-50" href="https://www.sixstaredu.com" target="_blank" title="PHP培训">PHP培训</a>
+			</div>
+		</li>
+		<li class="widget-container widget_text">
+			<h3 class="widget-title">时刻关注</h3>
+			<ul class="advanced-random-posts">
+								<li><a href="/post/7162/" target="_blank" title="PHP进程及进程间通信">PHP进程及进程间通信</a></li>
+								<li><a href="/post/7161/" target="_blank" title="基于pcntl的PHP进程池">基于pcntl的PHP进程池</a></li>
+								<li><a href="/post/7160/" target="_blank" title="php单例模式的常见应用场景">php单例模式的常见应用场景</a></li>
+								<li><a href="/post/7159/" target="_blank" title="MySQL索引优化">MySQL索引优化</a></li>
+								<li><a href="/post/7158/" target="_blank" title="php 简单的 单例模式">php 简单的 单例模式</a></li>
+								<li><a href="/post/7157/" target="_blank" title="Mysql复制方式(半同步复制，并行复制，多源复制)">Mysql复制方式(半同步复制，并行复制，多源复制)</a></li>
+								<li><a href="/post/7156/" target="_blank" title="【shell脚本】字符串和数组的使用">【shell脚本】字符串和数组的使用</a></li>
+								<li><a href="/post/7155/" target="_blank" title="php封装的sqlite操作类">php封装的sqlite操作类</a></li>
+								<li><a href="/post/7154/" target="_blank" title="php项目中类的自动加载">php项目中类的自动加载</a></li>
+								<li><a href="/post/7153/" target="_blank" title="几行php代码把数据格式化成树形结构">几行php代码把数据格式化成树形结构</a></li>
+								<li><a href="/post/7152/" target="_blank" title="PHP利用nginx的X-sendfile控制下载，提高下载效率">PHP利用nginx的X-sendfile控制下载，提高下载效率</a></li>
+								<li><a href="/post/7151/" target="_blank" title="PHP实现redis的批量操作命令pipeline">PHP实现redis的批量操作命令pipeline</a></li>
+								<li><a href="/post/7150/" target="_blank" title="2020 重学 Go 系列：07. 详解数据类型：指针">2020 重学 Go 系列：07. 详解数据类型：指针</a></li>
+								<li><a href="/post/7149/" target="_blank" title="2020 重学 Go 系列：08. 面向对象编程：结构体与继承">2020 重学 Go 系列：08. 面向对象编程：结构体与继承</a></li>
+								<li><a href="/post/7148/" target="_blank" title="2020 重学 Go 系列：09. 一篇文章理解 Go 里的函数">2020 重学 Go 系列：09. 一篇文章理解 Go 里的函数</a></li>
+								<li><a href="/post/7147/" target="_blank" title=" 2020 重学 Go 系列：10. Go语言流程控制：if-else? 条件语句"> 2020 重学 Go 系列：10. Go语言流程控制：if-else? 条件语句</a></li>
+							</ul>			
+		</li> 
+		<li id="text-5" class="widget-container widget_tag_cloud">
+			<h3 class="widget-title">热门推荐</h3>
+			<ul class="advanced-random-posts">
+								<li><a href="http://www.phpxs.com/post/2814" target="_blank" title="101个MySQL调试和优化技巧">101个MySQL调试和优化技巧</a></li>
+								<li><a href="http://www.phpxs.com/post/4300" target="_blank" title="不要学习代码，要学会思考">不要学习代码，要学会思考</a></li>
+								<li><a href="http://www.phpxs.com/post/3078" target="_blank" title="一些不起眼但非常有用的 Vim 命令">一些不起眼但非常有用的 Vim 命令</a></li>
+												<li><a href="http://www.phpxs.com/post/4077" target="_blank" title="8 个不得不说的 MySQL 陷阱">8 个不得不说的 MySQL 陷阱</a></li>
+								<li><a href="http://www.phpxs.com/post/4055" target="_blank" title="一个程序员的5年成长之路从1.5k到18k">一个程序员的5年成长之路从1.5k到18k</a></li>
+								<li><a href="http://www.phpxs.com/post/3502" target="_blank" title="程序员面试最重要注意哪些？">程序员面试最重要注意哪些？</a></li>
+								<li><a href="http://www.phpxs.com/post/4297" target="_blank" title="程序员永远不要再犯的5个编程bug">程序员永远不要再犯的5个编程bug</a></li>
+							</ul>
+		</li>
+	</ul>
+</aside>
+  <div class="cls"></div>
+
+<div class="tagcloud_link nav">
+	友情链接：
+			        			<a class="tag-link-32" href="http://www.phpxs.com/" title="编程学习网" target="_blank">编程学习网</a>
+					<a class="tag-link-32" href="http://blogs.zmit.cn" title="中梦科技博客" target="_blank">中梦科技博客</a>
+					<a class="tag-link-32" href="http://www.phpxs.com/post/yii2" title="Yii2.0教程" target="_blank">Yii2.0教程</a>
+					<a class="tag-link-32" href="http://www.zixuephp.net/" title="php自学网" target="_blank">php自学网</a>
+					<a class="tag-link-32" href="http://www.zixuephp.com/" title="自学php网" target="_blank">自学php网</a>
+					<a class="tag-link-32" href="http://www.it-bound.com/" title="IT帮区块链" target="_blank">IT帮区块链</a>
+					<a class="tag-link-32" href="http://www.cjjjs.com" title="C++技术网" target="_blank">C++技术网</a>
+				申请友链联系QQ：<a class="tag-link-31" target="_blank" href="tencent://message/?uin=857530&Site=PHP新手&Menu=yes">857530</a>
+</div>
+?<script type="text/javascript">loading('78%',350)</script>
+	</section>
+	<div class="cls"></div>
+	<footer id="footer" role="contentinfo">
+		<div id="colophon">
+			<div id="site-info">
+				<a href="javascript:void(0)" onclick="goRoll(0)" id="goTop">返回顶部</a>
+				<a href="http://www.phpxs.com/page/disclaimer">免责声明</a>
+				<a href="http://www.phpxs.com/sitemap.html">网站地图</a>
+                <a href="https://www.sixstaredu.com" target="_blank">PHP视频教程</a>
+				<a href="http://www.miitbeian.gov.cn/" target="_blank"> 湘ICP备15005647号-4</a> ? 2014 - 2020&nbsp;&nbsp;Powered by <a id="official" title="编程学习网" href="/">编程学习网</a> &nbsp;&nbsp;| 友情链接交换：<a class="" target="_blank" href="tencent://message/?uin=857530&Site=PHP新手&Menu=yes">857530</a>
+				<a target="_blank" href="/cdn-cgi/l/email-protection#407875777573700031316e232f2d" style="text-decoration:none;"><img src="/images/ico_mailme_01.png"/></a>
+			</div>
+		</div>	
+	</footer>
+</div>
+<div id="float"><a id="float_gotop" class="floatbtn" href="javascript:void()" onclick="goRoll(0)" title="返回顶部"></a><a class="linbak floatbtn" href="/page/about/" title="关于博主"></a><a id="float_goend" class="floatbtn" href="javascript:void()" onclick="goend()" title="转到底部"></a></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">loading('100%',350)</script>
+
+<script type="text/javascript" src="/js/jquery.lazyload.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	$(".lazyload_fadeIn img").lazyload({
+		 placeholder : "/images/grey.gif",
+		 effect      : "fadeIn"
+	});
+});
+</script>
+<div style="display: none;">
+	<a href="http://webscan.360.cn/index/checkwebsite/url/www.phpxs.com"></a>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3a2a87a50a3740bab7f0e417853427fd";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></div>
+</body>
+</html>
