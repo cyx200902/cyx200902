@@ -1,0 +1,36 @@
+<html>
+<body>
+<script type="text/javascript">
+function myFunction()
+{
+var flag=false;
+var x="",y="";
+x=document.getElementById("user").value;
+y=document.getElementById("password").value;
+var tip=document.getElementById("tipMsg");
+if(x==" "||y==" "){
+tip.innerHTML="用户名或密码不能为空!";
+}else if(x=="cyx200902"&& y=="2009cyx02"||x=="yrh"&& y=="yrh") {
+window.location.href="https://pan.baidu.com/s/1VXxLc-Yipf8xM2eIIYGWlw";
+}else{
+tip.innerHTML="用户名或密码错误!";
+
+}
+return flag;
+}
+</script>
+
+<form action="2.html" medhod="get" onsubmit="return myFunction()">
+<p>用户：
+<input id="user" type="text" name="user" /></p>
+
+<p>密码：
+<input id="password" type="password" name="password" /></p><br/>
+<span id="tipMsg" style="color:red;"></span><br/>
+
+<input type="submit" value="确定" />
+
+</from>
+<p id="mess"></p>
+</body>
+</html>
